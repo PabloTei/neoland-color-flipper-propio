@@ -21,7 +21,8 @@ Object.keys(colors).forEach((color) => {
 selectColor.addEventListener("change", (event) => {
   const newColor = event.target.value;
   document.body.style.backgroundColor = newColor;
-  colorName.innerText = `${colors[newColor]} | ${newColor}`;
+  const colorNameText= `${colors[newColor]} | ${newColor}`;
+  colorName.innerText = colors[newColor] ? colorNameText : "-";
 })
 
 
